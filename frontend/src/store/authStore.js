@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "https://mern-advanced-authentication-lhnq.onrender.com";
 axios.defaults.withCredentials = true;//faz com que todas as requisições feitas com Axios incluam automaticamente cookies e credenciais de autenticação (como tokens de sessão).
 
 
