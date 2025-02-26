@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 const __dirname = path.resolve();
 
-app.use(cors({origin:"http://localhost:5173",credentials:true}))// 🔥 Permite requisições de qualquer origem
+app.use(cors(/* {origin:"http://localhost:5173",credentials:true} */))// 🔥 Permite requisições de qualquer origem
 app.use(express.json());
 app.use(cookieParser());// ele ajuda a ler os cookies recebidos
 //O cookie-parser é um middleware que extrai os cookies do cabeçalho da requisição (req.headers.cookie) e os transforma em um objeto JavaScript acessível dentro de req.cookies.
