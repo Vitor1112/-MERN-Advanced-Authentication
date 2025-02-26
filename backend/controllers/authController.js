@@ -154,7 +154,7 @@ export const forgotPassword = async (req, res) => {
 
          //funcão que vai enviar link de redefinição de senha  http://localhost:5173
          // vou adicionar o resetToken no link , depois coloca na função enviar Email
-       await sendPasswordResetEmail(user.email, `${process.env.CLIENT_URL}/reset-password/${resetToken}`)
+       await sendPasswordResetEmail(user.email, `${process.env.CLIENT_UR}/reset-password/${resetToken}`)
           
          res.status(200).json({ success: true, message: "Password reset link sent to your email" });
     } catch (error) {
