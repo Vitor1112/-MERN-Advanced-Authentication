@@ -5,7 +5,7 @@ import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js
 import { sendPasswordResetEmail, sendResetSuccessEmail, sendVericationEmail, sendWelcomeEmail } from "../mailtrap/emails.js";
 
 
-/// Rota para cadastro
+/// Rota para cadastro ///
 export const signup = async (req, res) => {
      const { name, email, password } = req.body;
 
